@@ -1,0 +1,67 @@
+# Every document in data/documents/ is downloaded from one of these entries by
+# `uv run hybrid-search fetch`. Both sources are public domain:
+#
+# - MedlinePlus Genetics summaries, U.S. National Library of Medicine.
+#   https://medlineplus.gov/about/using/usingcontent/
+#   Data files: https://medlineplus.gov/about/data-files-api
+# - FDA drug labels via openFDA (CC0 1.0).
+#   https://open.fda.gov/terms/
+#
+# The set mirrors the article's running example: Fabry disease, plus
+# conditions and drugs that share its symptoms ("burning pain in the hands and
+# feet") without being it.
+
+[[medlineplus]]
+kind = "condition"
+slug = "fabry-disease"
+
+[[medlineplus]]
+kind = "gene"
+slug = "gla"
+
+[[medlineplus]]
+kind = "condition"
+slug = "erythromelalgia"
+
+[[medlineplus]]
+kind = "condition"
+slug = "small-fiber-neuropathy"
+
+[[medlineplus]]
+kind = "condition"
+slug = "paroxysmal-extreme-pain-disorder"
+
+[[medlineplus]]
+kind = "condition"
+slug = "hereditary-sensory-and-autonomic-neuropathy-type-ii"
+
+[[medlineplus]]
+kind = "condition"
+slug = "congenital-insensitivity-to-pain-with-anhidrosis"
+
+[[medlineplus]]
+kind = "condition"
+slug = "transcobalamin-deficiency"
+
+[[medlineplus]]
+kind = "condition"
+slug = "gaucher-disease"
+
+[[medlineplus]]
+kind = "condition"
+slug = "pompe-disease"
+
+[[fda_label]]
+brand = "ELFABRIO"
+sections = ["indications_and_usage", "pharmacodynamics"]
+
+[[fda_label]]
+brand = "GALAFOLD"
+# Not mechanism_of_action: it embeds a long table of GLA variants.
+sections = ["indications_and_usage"]
+
+[[fda_label]]
+brand = "XELODA"
+sections = ["warnings_and_cautions"]
+# Only the hand-foot syndrome subsection, not all of section 5.
+subsection = "5.8"
